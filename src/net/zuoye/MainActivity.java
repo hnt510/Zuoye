@@ -44,10 +44,14 @@ public class MainActivity extends Activity {
             intent.putExtra(EXTRA_MESSAGE, message);//将message放入intent中,这是一个键值对key:EXTRA_MESSAGE value:message
             startActivity(intent);
     }
-    
+
     @SuppressLint({ "NewApi", "ValidFragment" })
 	public class PromptInfoDialogFragment extends DialogFragment {
     	private boolean state;
+    	/**
+    	 * 
+    	 * @param s 决定使用哪一个对话框，true为退出对话框,false为欢迎对话框
+    	 */
 			PromptInfoDialogFragment(boolean s){
     			state = s;
             }
