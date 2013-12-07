@@ -18,7 +18,6 @@ public class MainActivity extends Activity {
         public final static String EXTRA_MESSAGE = "net.zuoye.MESSAGE";
         public final static String FRAGMENT_TAG="Tag";
 
-    @SuppressLint("NewApi")
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,6 @@ public class MainActivity extends Activity {
         dlg.show(getFragmentManager(), FRAGMENT_TAG);
     }
     
-    @SuppressLint("NewApi")
 	@Override  
     public void onBackPressed() { 
         PromptInfoDialogFragment dlg=new PromptInfoDialogFragment(true);
@@ -45,7 +43,7 @@ public class MainActivity extends Activity {
             startActivity(intent);
     }
 
-    @SuppressLint({ "NewApi", "ValidFragment" })
+	@SuppressLint("ValidFragment")
 	public class PromptInfoDialogFragment extends DialogFragment {
     	private boolean state;
     	/**
